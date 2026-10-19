@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/red-cup-engineering/computer-content-engineering-services-section.git",
-    "directory": "services/computer-content-graph-engineering-services-section/services/computer-graph-serialization-services-section"
+    "url": "git+https://github.com/red-cup-engineering/computer-graph-serialization-services-section.git"
   },
   "type": "module"
 }
