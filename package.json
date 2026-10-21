@@ -5,5 +5,10 @@
     "type": "git",
     "url": "git+https://github.com/red-cup-engineering/computer-graph-serialization-services-section.git"
   },
-  "type": "module"
+  "type": "module",
+  "license": "MIT",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/561-group/.github/blob/main/TIPS.md"
+  }
 }
