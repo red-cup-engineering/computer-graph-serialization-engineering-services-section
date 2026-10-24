@@ -1,9 +1,9 @@
 {
-  "name": "@red-cup-engineering/computer-graph-serialization-services-section",
+  "name": "@red-cup-engineering/computer-graph-serialization-engineering-services-section",
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/red-cup-engineering/computer-graph-serialization-services-section.git"
+    "url": "git+https://github.com/red-cup-engineering/computer-graph-serialization-engineering-services-section.git"
   },
   "type": "module",
   "license": "MIT",
