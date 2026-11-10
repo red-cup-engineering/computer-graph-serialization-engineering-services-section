@@ -8,3 +8,5 @@
 <!-- 561-group-standards:badges:end -->
 
 computer-graph-serialization-engineering-services-section is a services section of the 561 Group.
+
+It holds the FEATHER-G codec (`./feather-g-codec`), which reads the FEATHER-G reference graph-level JSON edge lists and embedding CSV into structural SignGraph readouts, and writes SignGraphs or feather-graph sources back out as FEATHER-G graph-input JSON together with sidecar receipts of what that format loses.

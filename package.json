@@ -1,5 +1,21 @@
 {
   "name": "@red-cup-engineering/computer-graph-serialization-services-section",
-  "version": "0.0.0",
-  "type": "module"
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    "./feather-g-codec": "./src/feather-g-codec.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "dependencies": {
+    "@red-cup-engineering/signgraph": "0.10.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  }
 }
