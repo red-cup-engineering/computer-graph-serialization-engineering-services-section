@@ -1,0 +1,14 @@
+# @red-cup-engineering/computer-graph-serialization-engineering-services-section
+
+<!-- 561-group-standards:badges:start -->
+[![Red Cup Engineering](https://img.shields.io/badge/561%20Group-Red%20Cup%20Engineering-c0392b)](https://github.com/red-cup-engineering)
+[![License: MIT](https://img.shields.io/badge/license-MIT-c0392b)](LICENSE)
+[![Indigenous data: CARE](https://img.shields.io/badge/Indigenous%20data-CARE-4b6f44)](https://github.com/red-cup-engineering/.github/blob/main/GOVERNANCE.md)
+[![Tips welcome](https://img.shields.io/badge/tips-welcome-d4a017)](https://github.com/561-group/.github/blob/main/TIPS.md)
+<!-- 561-group-standards:badges:end -->
+
+computer-graph-serialization-engineering-services-section is a services section of the 561 Group.
+
+It holds the FEATHER-G codec (`./feather-g-codec`), which reads the FEATHER-G reference graph-level JSON edge lists and embedding CSV into structural SignGraph readouts, and writes SignGraphs or feather-graph sources back out as FEATHER-G graph-input JSON together with sidecar receipts of what that format loses.
+
+`./presented-category` admits the shared diagram records for objects and morphisms. `./diagram-sequence` projects EAVT statement and witness logs into that carrier. `./plantuml` writes those records into PlantUML comments beside the rendered class, state-machine, or sequence diagram and reads them back.

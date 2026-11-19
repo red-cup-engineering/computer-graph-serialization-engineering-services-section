@@ -1,0 +1,29 @@
+{
+  "name": "@red-cup-engineering/computer-graph-serialization-engineering-services-section",
+  "version": "0.1.2",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    "./presented-category": "./src/presented-category.mjs",
+    "./diagram-sequence": "./src/diagram-sequence.mjs",
+    "./plantuml": "./src/plantuml.mjs",
+    "./feather-g-codec": "./src/feather-g-codec.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "dependencies": {
+    "@red-cup-engineering/computer-content-engineering-services-section": "^0.2.2",
+    "@red-cup-engineering/eavt-engineering-services-section": "^0.15.1",
+    "@red-cup-engineering/json-engine": "^0.5.0",
+    "@red-cup-engineering/json-schema-engineering-services-section": "^0.5.7",
+    "@red-cup-engineering/signgraph": "^0.10.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/computer-graph-serialization-engineering-services-section.git"
+  }
+}
