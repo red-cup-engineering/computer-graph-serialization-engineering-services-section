@@ -1,3 +1,4 @@
+import { compareText } from "@red-cup-engineering/semiotic-content-address-system";
 import { isRecord } from "@red-cup-engineering/signcell/values";
 /**
  * Boundary codecs for FEATHER-G (Rozemberczki–Sarkar CIKM 2020) and SignGraph.
@@ -18,7 +19,7 @@ import { glueSignGraphs } from '@red-cup-engineering/signgraph/semantic-graph';
 const freeze = Object.freeze;
 const own = Object.hasOwn;
 
-const idSort = (a, b) => a < b ? -1 : a > b ? 1 : 0;
+
 const MAX_GRAPHS = 128;
 const MAX_EDGES_PER_GRAPH = 4096;
 const MAX_VERTICES = 4097;
@@ -200,7 +201,7 @@ export function encodeFeatherGGraphCollection(inputs, {projection} = {}) {
   const graphs = Object.create(null), receipts = [];
   for (let index = 0; index < inputs.length; index++) {
     const original = originalIncidences(inputs[index]);
-    const vertices = [...original.vertices].sort(idSort);
+    const vertices = [...original.vertices].sort(compareText);
     if (new Set(vertices).size !== vertices.length) fail(`graph ${index}: duplicate source positions`);
     const n = vertices.length;
     if (n < 2 || n > MAX_VERTICES)
