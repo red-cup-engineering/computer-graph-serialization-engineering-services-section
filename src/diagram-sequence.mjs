@@ -16,9 +16,14 @@ function participantId(role, value) {
 }
 
 function sequenceDiagram(rows, { rowId, title, subject }) {
-  const ordered = rows
-    .map((row) => eavtRecord(row))
-    .sort((left, right) => canonicalJson(left.t).localeCompare(canonicalJson(right.t)) || rowId(left).localeCompare(rowId(right)));
+  const ordered = rows.map(row => eavtRecord(row));
+  // A numeric game clock orders tick 9 before tick 10. Other EAVT clocks
+  // retain their canonical ordering, including logs with mixed time domains.
+  const numericClock = ordered.every(row => typeof row.t === "number");
+  ordered.sort((left, right) => {
+    const timeOrder = numericClock ? left.t - right.t : canonicalJson(left.t).localeCompare(canonicalJson(right.t));
+    return timeOrder || rowId(left).localeCompare(rowId(right));
+  });
   const objects = new Map();
   const morphisms = [];
   const addParticipant = (id, label, detail) => {
