@@ -145,7 +145,7 @@ export function decodeFeatherGGraphCollection(input) {
   return result;
 }
 
-function validatedSignGraph(graph) {
+function admittedSignGraph(graph) {
   const result = glueSignGraphs(graph);
   if (!result.ok) fail(`source SignGraph readmission failed: ${result.refusal.message}`);
   if (result.value.obstructions.length) fail('source SignGraph has unresolved gluing obstructions');
@@ -156,7 +156,7 @@ function originalIncidences(input) {
   optionsOnly(input, ['graph', 'source', 'selectors'], 'source entry');
   if (own(input, 'graph')) {
     if (own(input, 'source') || own(input, 'selectors')) fail('source entry cannot mix SignGraph and feather source');
-    const g = validatedSignGraph(input.graph);
+    const g = admittedSignGraph(input.graph);
     // The closed SignCell graph includes original witness and other cells that
     // are not vertices of the endpoint-induced FEATHER-G projection. Record
     // their exclusion explicitly instead of exporting them as phantom isolates.

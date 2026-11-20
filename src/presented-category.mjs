@@ -45,10 +45,10 @@ export const presentedCategoryDiagramSchema = {
   additionalProperties: true,
 };
 
-export const presentedCategoryDiagramValidator = schemaFrom(presentedCategoryDiagramSchema);
+export const presentedCategoryDiagramCarrier = schemaFrom(presentedCategoryDiagramSchema);
 
 export function isPresentedCategoryDiagram(value) {
-  return presentedCategoryDiagramValidator.validate(value);
+  return presentedCategoryDiagramCarrier.validate(value);
 }
 
 export function requireRecord(value, context) {
@@ -92,7 +92,7 @@ export function presentedCategoryDiagram(input) {
     objects: Object.freeze(input.objects.map(objectFrom)),
     morphisms: Object.freeze(input.morphisms.map(morphismFrom)),
   });
-  return presentedCategoryDiagramValidator.assert(value, "presented category diagram");
+  return presentedCategoryDiagramCarrier.assert(value, "presented category diagram");
 }
 
 export function diagramFromCarrierCategory(category, defaultTitle = "carrier category") {
