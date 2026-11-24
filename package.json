@@ -28,8 +28,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/red-cup-engineering/computer-graph-serialization-engineering-services-section.git"
-  },
-  "scripts": {
-    "test": "node --test test/serialization.test.mjs"
   }
 }
